@@ -1172,5 +1172,16 @@ async function sendChat(){
 }
 function addMsg(text,type){const b=document.getElementById('chat-msgs'),el=document.createElement('div');el.className='cmsg '+type;el.textContent=text;b.appendChild(el);b.scrollTop=b.scrollHeight;return el}
 </script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
