@@ -1,145 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albrecht CMS</title>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Albrecht CMS&lt;/title&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.CMS_MANUAL_INIT = true;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>CMS.init({</p>
-<p class="p1"><span class="Apple-converted-space">      </span>config: {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>backend: {</p>
-<p class="p1"><span class="Apple-converted-space">          </span>name: 'git-gateway',</p>
-<p class="p1"><span class="Apple-converted-space">          </span>branch: 'main'</p>
-<p class="p1"><span class="Apple-converted-space">        </span>},</p>
-<p class="p1"><span class="Apple-converted-space">        </span>media_folder: 'images/uploads',</p>
-<p class="p1"><span class="Apple-converted-space">        </span>public_folder: '/images/uploads',</p>
-<p class="p1"><span class="Apple-converted-space">        </span>locale: 'de',</p>
-<p class="p1"><span class="Apple-converted-space">        </span>collections: [</p>
-<p class="p1"><span class="Apple-converted-space">          </span>{</p>
-<p class="p1"><span class="Apple-converted-space">            </span>name: 'settings',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>label: 'Website-Einstellungen',</p>
-<p class="p1"><span class="Apple-converted-space">            </span>files: [</p>
-<p class="p1"><span class="Apple-converted-space">              </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                </span>name: 'site',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>label: '✏️<span class="Apple-converted-space">  </span>Startseite &amp; Inhalte',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>file: 'content/site.json',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>format: 'json',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>fields: [</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Hero-Überschrift',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'hero_title',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'string',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>hint: 'Die große Überschrift auf der Startseite'</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Hero-Unterzeile',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'hero_sub',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'text',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>hint: 'Der beschreibende Satz unter der Überschrift'</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Telefonnummer',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'phone',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'string',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>hint: 'Wird überall auf der Website angezeigt'</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'E-Mail-Adresse',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'email',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'string'</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Jahre Erfahrung',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'years',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'string',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>hint: 'z.B. 26+'</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: '🛠️<span class="Apple-converted-space">  </span>Leistungen',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'services',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'list',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>summary: '{{fields.name}}',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fields: [</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Name der Leistung', name: 'name', widget: 'string' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Kategorie-Badge', <span class="Apple-converted-space">  </span>name: 'tag',<span class="Apple-converted-space">  </span>widget: 'select',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>options: ['Innen','Außen','Boden','Sanierung','Spezial'] },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Kurzbeschreibung',<span class="Apple-converted-space">  </span>name: 'desc', widget: 'text' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>label: 'Aufzählungspunkte',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>name: 'bullets',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>widget: 'list',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>field: { label: 'Punkt', name: 'item', widget: 'string' }</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>]</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: '⭐<span class="Apple-converted-space">  </span>Kundenstimmen',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'testimonials',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'list',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>summary: '{{fields.name}}',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fields: [</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Name des Kunden', name: 'name', <span class="Apple-converted-space">    </span>widget: 'string' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Ort / Rolle', <span class="Apple-converted-space">    </span>name: 'role', <span class="Apple-converted-space">    </span>widget: 'string' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Zitat', <span class="Apple-converted-space">          </span>name: 'quote',<span class="Apple-converted-space">    </span>widget: 'text' <span class="Apple-converted-space">  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Initialen', <span class="Apple-converted-space">      </span>name: 'initials', widget: 'string',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>hint: 'z.B. SK für Sabine K.' }</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>]</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: '📸<span class="Apple-converted-space">  </span>Galerie (Vorher/Nachher)',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'gallery',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'list',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>summary: '{{fields.label}}',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fields: [</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Beschriftung (z.B. Wohnzimmer · Lichtenrade)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>name: 'label',<span class="Apple-converted-space">  </span>widget: 'string' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Vorher-Bild', name: 'before', widget: 'image' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Nachher-Bild', name: 'after', widget: 'image' }</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>]</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>label: '📍<span class="Apple-converted-space">  </span>SEO Stadtteile-Seiten',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>name: 'districts',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>widget: 'list',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>summary: '{{fields.district}}',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>fields: [</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Stadtteil',<span class="Apple-converted-space">        </span>name: 'district', <span class="Apple-converted-space">    </span>widget: 'string' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'SEO-Titel',<span class="Apple-converted-space">        </span>name: 'seo_title',<span class="Apple-converted-space">    </span>widget: 'string' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'SEO-Beschreibung', name: 'seo_desc', <span class="Apple-converted-space">    </span>widget: 'text',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>hint: 'Max. 160 Zeichen' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Haupttext',<span class="Apple-converted-space">        </span>name: 'body', <span class="Apple-converted-space">        </span>widget: 'markdown' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Kundenzitat',<span class="Apple-converted-space">      </span>name: 'quote',<span class="Apple-converted-space">        </span>widget: 'text' },</p>
-<p class="p1"><span class="Apple-converted-space">                      </span>{ label: 'Zitatgeber', <span class="Apple-converted-space">      </span>name: 'quote_author', widget: 'string' }</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>]</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>]</p>
-<p class="p1"><span class="Apple-converted-space">              </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>]</p>
-<p class="p1"><span class="Apple-converted-space">          </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>]</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<script>window.CMS_MANUAL_INIT = true;</script>
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+CMS.init({config:{backend:{name:'git-gateway',branch:'main'},media_folder:'images/uploads',public_folder:'/images/uploads',locale:'de',collections:[{name:'settings',label:'Website-Einstellungen',files:[{name:'site',label:'Startseite & Inhalte',file:'content/site.json',format:'json',fields:[{label:'Hero-Überschrift',name:'hero_title',widget:'string'},{label:'Hero-Unterzeile',name:'hero_sub',widget:'text'},{label:'Telefonnummer',name:'phone',widget:'string'},{label:'E-Mail',name:'email',widget:'string'},{label:'Jahre Erfahrung',name:'years',widget:'string'},{label:'Leistungen',name:'services',widget:'list',summary:'{{fields.name}}',fields:[{label:'Name',name:'name',widget:'string'},{label:'Kategorie',name:'tag',widget:'select',options:['Innen','Außen','Boden','Sanierung','Spezial']},{label:'Beschreibung',name:'desc',widget:'text'},{label:'Aufzählungspunkte',name:'bullets',widget:'list',field:{label:'Punkt',name:'item',widget:'string'}}]},{label:'Kundenstimmen',name:'testimonials',widget:'list',summary:'{{fields.name}}',fields:[{label:'Name',name:'name',widget:'string'},{label:'Ort/Rolle',name:'role',widget:'string'},{label:'Zitat',name:'quote',widget:'text'},{label:'Initialen',name:'initials',widget:'string'}]},{label:'Galerie',name:'gallery',widget:'list',summary:'{{fields.label}}',fields:[{label:'Beschriftung',name:'label',widget:'string'},{label:'Vorher-Bild',name:'before',widget:'image'},{label:'Nachher-Bild',name:'after',widget:'image'}]},{label:'SEO Stadtteile',name:'districts',widget:'list',summary:'{{fields.district}}',fields:[{label:'Stadtteil',name:'district',widget:'string'},{label:'SEO-Titel',name:'seo_title',widget:'string'},{label:'SEO-Beschreibung',name:'seo_desc',widget:'text'},{label:'Haupttext',name:'body',widget:'markdown'},{label:'Kundenzitat',name:'quote',widget:'text'},{label:'Zitatgeber',name:'quote_author',widget:'string'}]}]}]}]}});
+</script>
 </body>
 </html>
