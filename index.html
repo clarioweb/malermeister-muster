@@ -62,6 +62,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .4s var(--ease),box-shadow .4s var(--ease)}
 nav.scrolled{background:rgba(253,251,247,.96);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border)}
+@media(max-width:768px){
+  nav{background:rgba(253,251,247,.97);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--border)}
+}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px;gap:1rem}
 .logo-wrap{display:flex;flex-direction:column;line-height:1;min-width:0;flex-shrink:1}
 .logo-name{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:500;color:var(--ink);letter-spacing:-.01em;white-space:nowrap}
@@ -385,7 +388,8 @@ footer{background:var(--ink);padding:4rem 0 2rem}
   .nav-links{display:none}
   .hamburger{display:flex;flex-shrink:0}
   .logo-name{font-size:1.1rem}
-  .logo-tagline{font-size:.55rem;letter-spacing:.15em}
+  .logo-tagline{display:none}
+  .logo-wrap{justify-content:center}
   .promise-inner{grid-template-columns:1fr 1fr}
   .promise-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .process-track{grid-template-columns:1fr 1fr;gap:2.5rem}
